@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const PORT = 3000;
-const PUBLIC_DIR = path.join(__dirname, 'portfolio');
+const PUBLIC_DIR = __dirname;  // Serve files from the root directory
 
 const MIME_TYPES = {
   '.html': 'text/html',
@@ -30,7 +30,7 @@ const server = http.createServer((req, res) => {
   // Parse URL
   let filePath = '.' + req.url;
   if (filePath === './') {
-    filePath = './portfolio/index.html';
+    filePath = './index.html';
   }
   
   // Get the file extension
