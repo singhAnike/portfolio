@@ -10,6 +10,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const cursor = document.querySelector('.cursor');
     const cursorFollower = document.querySelector('.cursor-follower');
     const scrollProgress = document.querySelector('.scroll-progress');
+    const heroSection = document.querySelector('.hero');
+    const heroTitle = document.querySelector('.hero-title');
+    const heroSubtitle = document.querySelector('.hero-subtitle');
+    const heroDescription = document.querySelector('.hero-description');
+    const heroCta = document.querySelector('.hero-cta');
+    const heroImage = document.querySelector('.hero-image');
+    const floatingElements = document.querySelectorAll('.floating-element');
+    const skillItems = document.querySelectorAll('.skill-item');
+    const skillCategories = document.querySelectorAll('.skill-category');
 
     // Initialize AOS (Animate On Scroll)
     if (typeof AOS !== 'undefined') {
@@ -21,14 +30,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Initialize Typed.js for typewriter effect
-    if (typeof Typed !== 'undefined') {
-        const typed = new Typed('.typewriter', {
+    // Initialize Typed.js for typewriter effect in hero section
+    if (typeof Typed !== 'undefined' && document.querySelector('.typing-text')) {
+        const typed = new Typed('.typing-text', {
             strings: [
-                'Full Stack Developer',
-                'UI/UX Designer',
-                'Problem Solver',
-                'Tech Enthusiast'
+                'Python Developer',
+                'Django Expert',
+                'Odoo Specialist',
+                'Full Stack Developer'
             ],
             typeSpeed: 50,
             backSpeed: 30,
@@ -39,6 +48,54 @@ document.addEventListener('DOMContentLoaded', () => {
             smartBackspace: true
         });
     }
+    
+    // Animate hero section elements on load
+    function animateHeroElements() {
+        if (heroTitle) heroTitle.style.animation = 'fadeInUp 0.8s ease-out forwards';
+        if (heroSubtitle) heroSubtitle.style.animation = 'fadeInUp 0.8s ease-out 0.2s forwards';
+        if (heroDescription) heroDescription.style.animation = 'fadeInUp 0.8s ease-out 0.4s forwards';
+        if (heroCta) heroCta.style.animation = 'fadeInUp 0.8s ease-out 0.6s forwards';
+        if (heroImage) heroImage.style.animation = 'fadeInRight 0.8s ease-out 0.4s forwards';
+        
+        // Animate floating elements with staggered delay
+        floatingElements.forEach((el, index) => {
+            el.style.animation = `float 6s ease-in-out ${index * 0.3}s infinite`;
+        });
+    }
+    
+    // Animate skills on scroll
+    function animateSkillsOnScroll() {
+        const skillsSection = document.querySelector('#skills');
+        if (!skillsSection) return;
+        
+        const skillsSectionTop = skillsSection.offsetTop;
+        const skillsSectionHeight = skillsSection.offsetHeight;
+        const windowHeight = window.innerHeight;
+        const scrollPosition = window.scrollY;
+        
+        // Check if skills section is in viewport
+        if (scrollPosition > (skillsSectionTop - windowHeight + 200)) {
+            skillItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.classList.add('animate');
+                }, index * 100);
+            });
+            
+            // Add hover effect to skill categories
+            skillCategories.forEach(category => {
+                category.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+            });
+            
+            // Remove the scroll event listener after animation is triggered
+            window.removeEventListener('scroll', animateSkillsOnScroll);
+        }
+    }
+    
+    // Add scroll event listener for skills animation
+    window.addEventListener('scroll', animateSkillsOnScroll);
+    
+    // Initialize hero animations
+    setTimeout(animateHeroElements, 500);
 
     // Theme Toggle
     function initTheme() {
