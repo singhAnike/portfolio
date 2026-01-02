@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio of Aniket Singh - Full Stack Developer & UI/UX Designer">
+    <meta name="author" content="Aniket Singh">
+    <meta name="keywords" content="Aniket Singh, Portfolio, Full Stack Developer, UI/UX Designer, Freelancer, Web Developer">
+    
+    <title>Aniket Singh | Full Stack Developer & UI/UX Designer</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="alternate icon" href="images/favicon.ico">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        /* Critical CSS to ensure content is visible immediately */
+        :root {
+            --color-bg: #ffffff;
+            --color-text: #333333;
+            --color-primary: #4a6cf7;
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        [data-theme="dark"] {
+            --color-bg: #0a192f;
+            --color-text: #e6f1ff;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-primary);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            transition: background-color 0.3s ease, color 0.3s ease;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Make sure content is visible */
+        section {
+            padding: 80px 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <div class="loader"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Cursor Effects -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">Aniket<span>.</span></a>
+                <div class="nav-links">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <button class="theme-toggle" aria-label="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+                </div>
+                <button class="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Theme Toggle (Floating) -->
+    <button class="theme-toggle floating-theme-toggle" aria-label="Toggle dark/light mode">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+    </button>
+    
+    <!-- Skip to Main Content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="/" class="logo" aria-label="Home">
+                    <span class="logo-text">YN</span>
+                </a>
+                
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link btn btn-primary">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content" data-aos="fade-up">
+                    <p class="greeting">Hi, my name is</p>
+                    <h1 class="hero-title">Aniket Singh.</h1>
+                    <h2 class="hero-subtitle">I build exceptional digital experiences.</h2>
+                    <p class="hero-description">
+                        I'm a <span class="highlight">Full Stack Developer</span> and <span class="highlight">UI/UX Designer</span> 
+                        specializing in building (and occasionally designing) exceptional digital experiences. 
+                        Currently focused on creating accessible, human-centered products.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                        <a href="#projects" class="btn btn-outline">View My Work</a>
+                    </div>
+                </div>
+                <div class="hero-image" data-aos="fade-left">
+                    <div class="image-container">
+                        <img src="images/profile.jpg" alt="Aniket Singh" class="profile-image">
+                        <div class="tech-stack">
+                            <div class="tech-icon" data-tooltip="React"><i class="fab fa-react"></i></div>
+                            <div class="tech-icon" data-tooltip="Node.js"><i class="fab fa-node-js"></i></div>
+                            <div class="tech-icon" data-tooltip="JavaScript"><i class="fab fa-js"></i></div>
+                            <div class="tech-icon" data-tooltip="Python"><i class="fab fa-python"></i></div>
+                        </div>
+                    </div>
+                </div>
+                    <p class="hero-greeting">Hi, my name is</p>
+                    <h1 class="hero-title">Your Name.</h1>
+                    <h2 class="hero-subtitle">I build things for the web.</h2>
+                    <p class="hero-description">
+                        I'm a <span class="highlight">Full-Stack Developer</span> and <span class="highlight">UI/UX Designer</span> 
+                        creating exceptional digital experiences that make an impact.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <!-- Animated visual or image will go here -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-number">01.</span>
+                    <span>About Me</span>
+                    <span class="section-line"></span>
+                </h2>
+                
+                <div class="about-grid">
+                    <div class="about-content">
+                        <p>Hello! My name is <strong>Your Name</strong> and I love creating things that live on the internet. My journey in web development started back in 2018 when I decided to try building my first website — turns out it taught me a lot about HTML & CSS!</p>
+                        <p>Fast-forward to today, and I've had the privilege of working at <a href="#" class="text-link">a start-up</a>, <a href="#" class="text-link">a huge corporation</a>, and <a href="#" class="text-link">a student-led design studio</a>. My main focus these days is building accessible, inclusive products and digital experiences at <a href="#" class="text-link">XYZ Corp</a> for a variety of clients.</p>
+                        <p>I also recently launched my <a href="#" class="text-link">freelance business</a> where I help individuals and businesses establish their online presence through custom web solutions.</p>
+                        <p>Here are a few technologies I've been working with recently:</p>
+                        
+                        <ul class="skills-list">
+                            <li>JavaScript (ES6+)</li>
+                            <li>React</li>
+                            <li>Node.js</li>
+                            <li>TypeScript</li>
+                            <li>GraphQL</li>
+                            <li>Figma</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="about-image">
+                        <div class="image-wrapper">
+                            <img src="/images/profile.jpg" alt="Your Name" loading="lazy">
+                            <div class="image-border"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Timeline Component -->
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <span class="timeline-date">2021 - Present</span>
+                            <h3 class="timeline-title">Senior Frontend Developer</h3>
+                            <h4 class="timeline-company">Tech Solutions Inc.</h4>
+                            <p>Leading frontend development for enterprise applications, implementing design systems, and mentoring junior developers.</p>
+                        </div>
+                    </div>
+                    <!-- More timeline items will be added via JavaScript -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-number">02.</span>
+                    <span>Where I've Worked</span>
+                    <span class="section-line"></span>
+                </h2>
+                
+                <div class="experience-tabs">
+                    <div role="tablist" aria-label="Experience Tabs" class="tab-buttons">
+                        <button role="tab" aria-selected="true" aria-controls="professional-tab" id="professional" class="tab-button active">Professional</button>
+                        <button role="tab" aria-selected="false" aria-controls="freelance-tab" id="freelance" class="tab-button">Freelance</button>
+                    </div>
+                    
+                    <div class="tab-content">
+                        <div id="professional-tab" role="tabpanel" aria-labelledby="professional" class="tab-panel active">
+                            <!-- Professional experience will be loaded here -->
+                        </div>
+                        <div id="freelance-tab" role="tabpanel" aria-labelledby="freelance" class="tab-panel">
+                            <!-- Freelance experience will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-number">03.</span>
+                    <span>My Skills</span>
+                    <span class="section-line"></span>
+                </h2>
+                
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3 class="skill-category-title">Frontend</h3>
+                        <div class="skills-grid">
+                            <!-- Skills will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    <!-- More skill categories will be added -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-number">04.</span>
+                    <span>Featured Projects</span>
+                    <span class="section-line"></span>
+                </h2>
+                
+                <div class="projects-grid">
+                    <!-- Project cards will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-number">05.</span>
+                    <span>Client Testimonials</span>
+                    <span class="section-line"></span>
+                </h2>
+                
+                <div class="testimonials-slider">
+                    <!-- Testimonials will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="section-number">06.</span>
+                    <span>Get In Touch</span>
+                    <span class="section-line"></span>
+                </h2>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <p class="contact-text">
+                            I'm currently looking for new opportunities, my inbox is always open. 
+                            Whether you have a question or just want to say hi, I'll get back to you as soon as possible!
+                        </p>
+                        
+                        <div class="social-links">
+                            <a href="https://github.com/singhAnike" target="_blank" class="social-link" aria-label="GitHub">
+                                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/aniket-singh-622744213/" target="_blank" class="social-link" aria-label="LinkedIn">
+                                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.freelancer.in/u/singh7509811123" target="_blank" class="social-link" aria-label="Freelancer">
+                                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path fill="currentColor" d="M6.5 13.5h11v1h-11z"/>
+                                    <path fill="currentColor" d="M22 12c0 5.5-4.5 10-10 10S2 17.5 2 12 6.5 2 12 2s10 4.5 10 10zm-1.5 0c0-4.7-3.8-8.5-8.5-8.5S3.5 7.3 3.5 12s3.8 8.5 8.5 8.5 8.5-3.8 8.5-8.5z"/>
+                                    <path fill="currentColor" d="M8.5 10.5h7v1h-7z"/>
+                                    <path fill="currentColor" d="M10.5 8.5h3v5h-3z"/>
+                                </svg>
+                            </a>
+                            <a href="mailto:singh7509811123@gmail.com" class="social-link" aria-label="Email">
+                                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                            </a>
+                            <a href="https://wa.me/917509811123" class="social-link" aria-label="WhatsApp">
+                                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path fill="currentColor" d="M17.5 14.4l-2.2-2.2c-.2-.2-.5-.2-.7 0l-1.6 1.6c-.6-.3-1.4-.8-2-1.4-.6-.6-1.1-1.4-1.4-2l1.6-1.6c.2-.2.2-.5 0-.7L9.6 6.5c-.2-.2-.5-.2-.7 0l-2.5 2.5c-.2.2-.3.5-.3.7 0 2.5 1 4.9 2.8 6.7 1.8 1.8 4.2 2.8 6.7 2.8.3 0 .5-.1.7-.3l2.5-2.5c.3-.2.3-.5.1-.7zM12 2C6.5 2 2 6.5 2 12c0 2.2.7 4.2 1.8 5.9L2 22l4.1-1.8c1.6 1.1 3.5 1.8 5.6 1.8 5.5 0 10-4.5 10-10S17.5 2 12 2z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <form id="contact-form" class="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                            <div class="error-message"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                            <div class="error-message"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                            <div class="error-message"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <div class="error-message"></div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="/" class="footer-logo">YN</a>
+                    <p class="footer-tagline">Building digital experiences that make an impact.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3 class="footer-title">Get In Touch</h3>
+                    <ul>
+                        <li><a href="mailto:singh7509811123@gmail.com">singh7509811123@gmail.com</a></li>
+                        <li><a href="tel:+917509811123">+91 7509811123</a></li>
+                        <li><a href="https://wa.me/917509811123" target="_blank">WhatsApp: +91 7509811123</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">&copy; <span id="current-year"></span> Your Name. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <span class="divider">|</span>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
+    
+    <!-- Project Modals -->
+    <div id="project-modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">
+                <span class="sr-only">Close</span>
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-body">
+                <!-- Project content will be loaded here -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">Aniket<span>.</span></a>
+                    <p>Building digital experiences that make an impact.</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://wa.me/yourphonenumber" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.freelancer.com/u/yourusername" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Freelancer">
+                        <i class="fas fa-laptop-code"></i>
+                    </a>
+                    <a href="https://www.upwork.com/freelancers/~youraccount" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Upwork">
+                        <i class="fab fa-upwork"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Aniket Singh. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#privacy-policy">Privacy Policy</a>
+                    <span>•</span>
+                    <a href="#terms">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="js/main-new.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            easing: 'ease-in-out',
+            offset: 100
+        });
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Preloader
+        window.addEventListener('load', () => {
+            const preloader = document.querySelector('.preloader');
+            preloader.style.opacity = '0';
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+        });
+    </script>
+</body>
+</html>
