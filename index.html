@@ -2,7 +2,11 @@
 <html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <meta name="theme-color" content="#4A6CF7">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="description" content="Professional portfolio of Aniket Singh - Full Stack Developer & UI/UX Designer">
     <meta name="author" content="Aniket Singh">
     <meta name="keywords" content="Aniket Singh, Portfolio, Full Stack Developer, UI/UX Designer, Freelancer, Web Developer">
@@ -14,8 +18,9 @@
     <link rel="alternate icon" href="images/favicon.ico">
     
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive-fixes.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <!-- Fonts -->
@@ -126,7 +131,9 @@
                 </a>
                 
                 <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-                    <span class="hamburger"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </button>
                 
                 <ul class="nav-menu">
@@ -533,7 +540,7 @@
         
         <!-- Testimonials Section -->
         <section id="testimonials" class="section">
-            <div class="container">
+            <div class="container testimonials-container">
                 <h2 class="section-title">
                     <span class="section-number">05.</span>
                     <span>Client Testimonials</span>
@@ -716,6 +723,8 @@
     <script src="js/main.js"></script>
     <script src="js/main-new.js"></script>
     <script src="js/projects-data.js"></script>
+    <script src="js/mobile-nav.js"></script>
+    <script src="js/dropdown-menu.js"></script>
     <script>
         // Initialize AOS
         AOS.init({
