@@ -31,7 +31,7 @@ const projects = [
             "Improved order fulfillment accuracy to 99.9%"
         ],
         value: "Transformed inventory management from a manual, error-prone process to an automated, efficient system that scales with business growth.",
-        image: "images/projects/inventory-automation.jpg",
+        image: "images/projects/multi-channel-intigration.jpg",
         tags: ["Odoo", "E-commerce", "Automation", "Integration"]
     },
     {
@@ -65,7 +65,7 @@ const projects = [
             "Automated 90% of routine campaign management tasks"
         ],
         value: "Revolutionized Amazon advertising strategy through data-driven optimization, delivering higher ROI with less manual effort.",
-        image: "images/projects/amazon-ads.jpg",
+        image: "images/projects/amz_bid_optimizations.jpg",
         tags: ["Digital Marketing", "Automation", "Data Analysis", "Python"]
     },
     {
@@ -98,7 +98,7 @@ const projects = [
             "Received 5-star review for code quality and documentation"
         ],
         value: "Delivered a high-quality, user-friendly movie database application that showcases full-stack development skills and attention to client requirements.",
-        image: "images/projects/movie-app.jpg",
+        image: "images/projects/movie.jpg",
         tags: ["Web Development", "Angular", "Flask", "REST API"]
     },
     {
@@ -132,7 +132,7 @@ const projects = [
             "Provided detailed documentation for future maintenance"
         ],
         value: "Restored critical payment functionality, ensuring smooth and secure transactions for the e-commerce store, directly impacting revenue and customer satisfaction.",
-        image: "images/projects/payment-integration.jpg",
+        image: "images/projects/razorpay-intigration.jpg",
         tags: ["E-commerce", "Payment Gateway", "Odoo", "Integration"]
     },
     {
@@ -165,7 +165,7 @@ const projects = [
             "Established long-term collaboration for future projects"
         ],
         value: "Delivered high-quality, optimized Python code that exceeds client expectations, demonstrating expertise in code quality and performance optimization.",
-        image: "images/projects/code-review.jpg",
+        image: "images/projects/python-script-checker.jpg",
         tags: ["Code Review", "Python", "Optimization", "Best Practices"]
     }
 ];
