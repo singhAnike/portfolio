@@ -61,6 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Theme toggle functionality
     function initThemeToggle() {
         if (!themeToggle) return;
+        if (document.documentElement.hasAttribute('data-theme')) return;
         
         // Check for saved user preference, if any, on load
         const savedTheme = localStorage.getItem('theme') || 

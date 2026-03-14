@@ -21,12 +21,13 @@
     <link rel="stylesheet" href="css/portfolio.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/responsive-fixes.css">
+    <link rel="stylesheet" href="css/redesign.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -34,16 +35,16 @@
     <style>
         /* Critical CSS to ensure content is visible immediately */
         :root {
-            --color-bg: #ffffff;
-            --color-text: #333333;
-            --color-primary: #4a6cf7;
-            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            --color-bg: #f8f9fb;
+            --color-text: #1f2937;
+            --color-primary: #1a73e8;
+            --font-primary: 'Manrope', 'Segoe UI', system-ui, sans-serif;
+            --font-heading: 'Sora', 'Segoe UI', system-ui, sans-serif;
         }
         
         [data-theme="dark"] {
-            --color-bg: #0a192f;
-            --color-text: #e6f1ff;
+            --color-bg: #0b0f1a;
+            --color-text: #e6edf3;
         }
         
         body {
@@ -63,12 +64,9 @@
             padding: 0 20px;
         }
         
-        /* Make sure content is visible */
+        /* Keep sections visible without forcing full viewport height */
         section {
             padding: 80px 0;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
         }
     </style>
 </head>
@@ -81,44 +79,9 @@
         </div>
     </div>
 
-    <!-- Cursor Effects -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-
     <!-- Scroll Progress -->
     <div class="scroll-progress"></div>
 
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="#" class="logo">Aniket<span>.</span></a>
-                <div class="nav-links">
-                    <a href="#home" class="nav-link active">Home</a>
-                    <a href="#about" class="nav-link">About</a>
-                    <a href="#experience" class="nav-link">Experience</a>
-                    <a href="#projects" class="nav-link">Projects</a>
-                    <a href="#contact" class="nav-link">Contact</a>
-                    <button class="theme-toggle" aria-label="Toggle theme">
-                        <i class="fas fa-moon"></i>
-                        <i class="fas fa-sun"></i>
-                    </button>
-                </div>
-                <button class="hamburger" aria-label="Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </nav>
-        </div>
-    </header>
-    
-    <!-- Theme Toggle (Floating) -->
-    <button class="theme-toggle floating-theme-toggle" aria-label="Toggle dark/light mode">
-        <i class="fas fa-moon"></i>
-        <i class="fas fa-sun"></i>
-    </button>
-    
     <!-- Skip to Main Content -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
     
@@ -127,7 +90,10 @@
         <div class="container">
             <nav class="nav">
                 <a href="/" class="logo" aria-label="Home">
-                    <span class="logo-text">YN</span>
+                    <span class="logo-mark">
+                        <span class="logo-top">Singh</span>
+                        <span class="logo-main">A</span>
+                    </span>
                 </a>
                 
                 <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -137,6 +103,7 @@
                 </button>
                 
                 <ul class="nav-menu">
+                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
                     <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
                     <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
@@ -144,6 +111,7 @@
                     <li class="nav-item"><a href="#testimonials" class="nav-link">Testimonials</a></li>
                     <li class="nav-item"><a href="#contact" class="nav-link btn btn-primary">Contact Me</a></li>
                 </ul>
+                <button class="theme-toggle" aria-label="Toggle theme">🌓</button>
             </nav>
         </div>
     </header>
@@ -157,7 +125,6 @@
                     <h1 class="hero-title">Aniket Singh</h1>
                     <h2 class="hero-subtitle">
                         <span class="typing-text">Python Developer</span>
-                        <span class="cursor">|</span>
                     </h2>
                     <p class="hero-description">
                         I'm a <span class="highlight">Python Developer</span> specializing in 
@@ -168,38 +135,6 @@
                         <a href="#contact" class="btn btn-primary">Get In Touch</a>
                         <a href="#about" class="btn btn-outline">Learn More</a>
                     </div>
-                    <div class="social-links">
-                        <a href="https://github.com/singhAnike" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/aniket-singh-622744213/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://wa.me/917509811123" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-                <div class="hero-image" data-aos="fade-left">
-                    <div class="image-container">
-                        <div class="image-wrapper">
-                            <img src="images/profile.jpg" alt="Aniket Singh" class="profile-image">
-                            <div class="floating-elements">
-                                <span class="floating-element element-1"><i class="fab fa-python"></i></span>
-                                <span class="floating-element element-2"><i class="fab fa-docker"></i></span>
-                                <span class="floating-element element-3"><i class="fas fa-database"></i></span>
-                                <span class="floating-element element-4"><i class="fab fa-js"></i></span>
-                            </div>
-                        </div>
-                        <div class="tech-stack">
-                            <div class="tech-icon" data-tooltip="Python"><i class="fab fa-python"></i></div>
-                            <div class="tech-icon" data-tooltip="Django"><i class="fas fa-server"></i></div>
-                            <div class="tech-icon" data-tooltip="Odoo"><i class="fas fa-cubes"></i></div>
-                            <div class="tech-icon" data-tooltip="REST API"><i class="fas fa-code-branch"></i></div>
-                            <div class="tech-icon" data-tooltip="PostgreSQL"><i class="fas fa-database"></i></div>
-                            <div class="tech-icon" data-tooltip="Docker"><i class="fab fa-docker"></i></div>
-                        </div>
-                    </div>
-                </div>
-                        <a href="#contact" class="btn btn-outline">Get In Touch</a>
-                    </div>
-                </div>
-                <div class="hero-visual">
-                    <!-- Animated visual or image will go here -->
                 </div>
             </div>
         </section>
@@ -235,9 +170,8 @@
                     </div>
                     
                     <div class="about-image">
-                        <div class="image-wrapper">
+                        <div class="image-wrapper passport-photo">
                             <img src="images/profile.jpg" alt="Aniket Singh" loading="lazy">
-                            <div class="image-border"></div>
                         </div>
                     </div>
                 </div>
@@ -307,7 +241,7 @@
                             
                             <div class="experience-item">
                                 <h3>Python Developer</h3>
-                                <h4>Fatmug · Full-time</h4>
+                                <h4>Fatmug Designs Full-time</h4>
                                 <span class="experience-date">Dec 2023 - May 2025 · 1 yr 6 mos</span>
                                 <p class="experience-location">Delhi, India · Remote</p>
                                 <ul class="experience-details">
@@ -573,36 +507,6 @@
                             Whether you have a question or just want to say hi, I'll get back to you as soon as possible!
                         </p>
                         
-                        <div class="social-links">
-                            <a href="https://github.com/singhAnike" target="_blank" class="social-link" aria-label="GitHub">
-                                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-                                </svg>
-                            </a>
-                            <a href="https://www.linkedin.com/in/aniket-singh-622744213/" target="_blank" class="social-link" aria-label="LinkedIn">
-                                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                                </svg>
-                            </a>
-                            <a href="https://www.freelancer.in/u/singh7509811123" target="_blank" class="social-link" aria-label="Freelancer">
-                                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path fill="currentColor" d="M6.5 13.5h11v1h-11z"/>
-                                    <path fill="currentColor" d="M22 12c0 5.5-4.5 10-10 10S2 17.5 2 12 6.5 2 12 2s10 4.5 10 10zm-1.5 0c0-4.7-3.8-8.5-8.5-8.5S3.5 7.3 3.5 12s3.8 8.5 8.5 8.5 8.5-3.8 8.5-8.5z"/>
-                                    <path fill="currentColor" d="M8.5 10.5h7v1h-7z"/>
-                                    <path fill="currentColor" d="M10.5 8.5h3v5h-3z"/>
-                                </svg>
-                            </a>
-                            <a href="mailto:singh7509811123@gmail.com" class="social-link" aria-label="Email">
-                                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                                </svg>
-                            </a>
-                            <a href="https://wa.me/917509811123" class="social-link" aria-label="WhatsApp">
-                                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path fill="currentColor" d="M17.5 14.4l-2.2-2.2c-.2-.2-.5-.2-.7 0l-1.6 1.6c-.6-.3-1.4-.8-2-1.4-.6-.6-1.1-1.4-1.4-2l1.6-1.6c.2-.2.2-.5 0-.7L9.6 6.5c-.2-.2-.5-.2-.7 0l-2.5 2.5c-.2.2-.3.5-.3.7 0 2.5 1 4.9 2.8 6.7 1.8 1.8 4.2 2.8 6.7 2.8.3 0 .5-.1.7-.3l2.5-2.5c.3-.2.3-.5.1-.7zM12 2C6.5 2 2 6.5 2 12c0 2.2.7 4.2 1.8 5.9L2 22l4.1-1.8c1.6 1.1 3.5 1.8 5.6 1.8 5.5 0 10-4.5 10-10S17.5 2 12 2z"/>
-                                </svg>
-                            </a>
-                        </div>
                     </div>
                     
                     <form id="contact-form" class="contact-form" novalidate>
@@ -645,16 +549,16 @@
                     <a href="/" class="footer-logo">Aniket<span>.</span></a>
                     <p class="footer-tagline">Building digital experiences that make an impact.</p>
                     <div class="social-links">
-                        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/in/aniket-singh-622744213/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                        <a href="https://github.com/singhAnike" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
                             <i class="fab fa-github"></i>
                         </a>
                         <a href="https://wa.me/917509811123" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp">
                             <i class="fab fa-whatsapp"></i>
                         </a>
-                        <a href="https://www.freelancer.com/u/yourusername" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Freelancer">
+                        <a href="https://www.freelancer.in/u/singh7509811123" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Freelancer">
                             <i class="fas fa-laptop-code"></i>
                         </a>
                     </div>
@@ -680,8 +584,7 @@
                     </ul>
                 </div>
             </div>
-            
-            <div class="footer-bottom">
+            <div class="footer-meta">
                 <p class="copyright">&copy; <span id="current-year"></span> Aniket Singh. All rights reserved.</p>
                 <div class="footer-legal">
                     <a href="#privacy-policy">Privacy Policy</a>
@@ -711,11 +614,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Back to Top Button -->
-    <button class="back-to-top" aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

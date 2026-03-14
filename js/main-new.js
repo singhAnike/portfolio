@@ -43,8 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
             backSpeed: 30,
             backDelay: 1500,
             loop: true,
-            showCursor: true,
-            cursorChar: '|',
+            showCursor: false,
             smartBackspace: true
         });
     }
@@ -102,9 +101,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Get theme from localStorage or use system preference
         let currentTheme = localStorage.getItem('theme');
         
-        // If no theme is set in localStorage, use system preference
+        // If no theme is set in localStorage, default to dark
         if (!currentTheme) {
-            currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            currentTheme = 'dark';
             localStorage.setItem('theme', currentTheme);
         }
         
